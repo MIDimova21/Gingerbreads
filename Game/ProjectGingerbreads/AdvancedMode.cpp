@@ -1,3 +1,4 @@
+#include "../ProjectGingerbreads/AdvancedMode.h"
 #include<iostream>
 #include<time.h> // time
 #include<cstdlib> // rand, srand
@@ -6,7 +7,6 @@ using namespace std;
 void AdvancedGenerator()
 {
 	// seeds random number
-	srand(time(0));
 	srand(time(NULL));
 	string advancedmodewords[30] = {
 		"action", "based", "cheat", "dairy", "depot",
