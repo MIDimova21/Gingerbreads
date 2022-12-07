@@ -5,7 +5,8 @@ using namespace std;
 
 void Generator()
 {
-	srand(time(0)); // seeds random number
+	// seeds random number
+	srand(time(0)); 
 	srand(time(NULL));
 	string easymodewords[30] = {
 		"rain", "play", "lean", "stab", "seed",
@@ -16,12 +17,11 @@ void Generator()
 		"near", "nail", "hair", "sore", "race"
 	};
 
+	// generates the index of the word in the array and its variable and saves the word in a new variable
 	int index = rand() % 30;
-	string word = easymodewords[index];
+	string word = easymodewords[index]; 
 
 	string totable[1][4] = {
-
+		//in incoming commit
 	}
 }
-
-void 
