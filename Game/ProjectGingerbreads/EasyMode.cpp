@@ -3,7 +3,7 @@
 #include<cstdlib> // rand, srand
 using namespace std;
 
-void Generator()
+void EasyGenerator()
 {
 	// seeds random number
 	srand(time(0)); 
