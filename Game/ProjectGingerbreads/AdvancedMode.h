@@ -1,4 +1,3 @@
 #pragma once
-#include<iostream>
 
-void AdvancedGenerator();
+#include<iostream>

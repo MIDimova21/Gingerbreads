@@ -1,3 +1,4 @@
+#include "../ProjectGingerbreads/EasyMode.h"
 #include<iostream>
 #include<time.h> // time
 #include<cstdlib> // rand, srand
