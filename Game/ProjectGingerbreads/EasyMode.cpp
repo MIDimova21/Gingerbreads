@@ -12,7 +12,7 @@ void Generator()
 		"rain", "play", "lean", "stab", "seed",
 		"tape", "land", "bowl", "camp", "fork",
 		"crew", "dual", "pack", "hand", "sour",
-		"breed", "rank", "star", "scar", "wood",
+		"cost", "rank", "star", "scar", "wood",
 		"year", "mood", "love", "like", "hate",
 		"near", "nail", "hair", "sore", "race"
 	};
