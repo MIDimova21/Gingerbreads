@@ -10,7 +10,19 @@ using namespace std;
 
 void displaymenu()
 {
-	cout << setw(25) << "WORDLE \n\n";
+	system("cls");
+	cout << "=================================================================" << endl;
+	cout << "|                                                               |" << endl;
+	cout << "|   $$\\      $$\\                           $$\\ $$\\              |" << endl;
+	cout << "|   $$ | $\\  $$ |                          $$ |$$ |             |" << endl;
+	cout << "|   $$ |$$$\\ $$ | $$$$$$\\   $$$$$$\\   $$$$$$$ |$$ | $$$$$$\\     |" << endl;
+	cout << "|   $$ $$ $$\\$$ |$$  __$$\\ $$  __$$\\ $$  __$$ |$$ |$$  __$$\\    |" << endl;
+	cout << "|   $$$$  _$$$$ |$$ /  $$ |$$ |  \\__|$$ /  $$ |$$ |$$$$$$$$ |   |" << endl;
+	cout << "|   $$$  / \\$$$ |$$ |  $$ |$$ |      $$ |  $$ |$$ |$$   ____|   |" << endl;
+	cout << "|   $$  /   \\$$ |\\$$$$$$  |$$ |      \\$$$$$$$ |$$ |\\$$$$$$$\\    |" << endl;
+	cout << "|   \\__/     \\__| \\______/ \\__|       \\_______|\\__| \\_______|   |" << endl;
+	cout << "|                                                               |" << endl;
+	cout << "=================================================================" << endl;
 }
 
 void start()
@@ -25,8 +37,10 @@ void start()
 	cout << "4. Christmas Edition" << endl;
 	do
 	{
-		cout << "Enter your choice:";
+		cout << "\nEnter your choice:\n";
 		cin >> yourchoice;
+		cout << "\nPress y to confirm \n";
+		cin >> confirm;
 		switch (yourchoice)
 		{
 		case 1:
@@ -55,11 +69,11 @@ void start()
 		}
 		default:
 		{
-			cout << "You have entered an invalid option, please enter a valid one";
+			ClearScreen();
+			displaymenu();
+			cout << "\nYou have entered an invalid option, please enter a valid one!\n";
 			break;
 		}
 		}
-		cout << "Press y to confirm \n";
-		cin >> confirm;
 	} while (confirm == "y" || confirm == "Y");
 }
