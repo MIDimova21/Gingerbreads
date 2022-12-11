@@ -140,7 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AdvancedMode.cpp" />
-    <ClCompile Include="ChristmasEdition.cpp" />
     <ClCompile Include="EasyMode.cpp" />
     <ClCompile Include="ExtremeMode.cpp" />
     <ClCompile Include="Functions.cpp" />
@@ -149,7 +148,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AdvancedMode.h" />
-    <ClInclude Include="ChristmasEdition.h" />
     <ClInclude Include="EasyMode.h" />
     <ClInclude Include="ExtremeMode.h" />
     <ClInclude Include="Functions.h" />
