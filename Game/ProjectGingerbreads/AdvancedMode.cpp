@@ -72,7 +72,7 @@ void AdvancedSuggestionFirst()
 			cin >> suggestionOne[row][col];
 			if (suggestionOne[row][col] == word[advancedindex][col])
 			{
-				count++;
+				++count;
 			}
 		}
 		if (count == 5)
