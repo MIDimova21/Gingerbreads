@@ -5,47 +5,54 @@
 #include<iomanip>
 using namespace std;
 
+char word[1][6];
+int extrememodeindex;
 void ExtremeGenerator()
 {
 	srand(time(NULL));
-	string extrememodewords[30][6] = {
-		{"s", "n", "a", "z", "z", "y"},
-		{"a", "v", "a", "t", "a", "r"},
-		{"d", "i", "a", "d", "e", "m"},
-		{"g", "u", "i", "t", "a", "r"},
-		{"m", "i", "a", "c", "i", "d"},
-		{"o", "c", "e", "l", "o", "t"},
-		{"b", "u", "r", "g", "l", "e"},
-		{"g", "n", "o", "m", "i", "c"},
-		{"c", "l", "u", "t", "c", "h"},
-		{"s", "c", "h", "i", "s", "t"},
-		{"c", "a", "l", "l", "o", "w"},
-		{"g", "n", "e", "i", "s", "s"},
-		{"p", "a", "n", "z", "e", "r"},
-		{"h", "a", "r", "b", "o", "r"}, 
-		{"m", "o", "h", "a", "w", "k"},
-		{"a", "n", "o", "x", "i", "a"},
-		{"q", "u", "a", "h", "o", "g"},
-		{"s", "l", "i", "t", "h", "y"},
-		{"p", "r", "o", "t", "o", "n"},
-		{"n", "e", "t", "t", "l", "y"},
-		{"v", "e", "l", "v", "e", "t"},
-		{"w", "h", "i", "n", "g", "e"},
-		{"g", "e", "r", "b", "i", "l"},
-		{"h", "a", "r", "b", "o", "r"},
-		{"b", "a", "t", "h", "o", "s"},
-		{"t", "a", "t", "t", "o", "o"},
-		{"a", "c", "e", "t", "i", "c"},
-		{"p", "i", "t", "h", "o", "n"},
-		{"x", "i", "s", "t", "y", "s"},
-		{"d", "e", "n", "g", "u", "e"},
+	char extrememodewords[30][6] = {
+		{'s', 'n', 'a', 'z', 'z', 'y'},
+		{'a', 'v', 'a', 't', 'a', 'r'},
+		{'d', 'i', 'a', 'd', 'e', 'm'},
+		{'g', 'u', 'i', 't', 'a', 'r'},
+		{'m', 'i', 'a', 'c', 'i', 'd'},
+		{'o', 'c', 'e', 'l', 'o', 't'},
+		{'b', 'u', 'r', 'g', 'l', 'e'},
+		{'g', 'n', 'o', 'm', 'i', 'c'},
+		{'c', 'l', 'u', 't', 'c', 'h'},
+		{'s', 'c', 'h', 'i', 's', 't'},
+		{'c', 'a', 'l', 'l', 'o', 'w'},
+		{'g', 'n', 'e', 'i', 's', 's'},
+		{'p', 'a', 'n', 'z', 'e', 'r'},
+		{'h', 'a', 'r', 'b', 'o', 'r'},
+		{'m', 'o', 'h', 'a', 'w', 'k'},
+		{'a', 'n', 'o', 'x', 'i', 'a'},
+		{'q', 'u', 'a', 'h', 'o', 'g'},
+		{'s', 'l', 'i', 't', 'h', 'y'},
+		{'p', 'r', 'o', 't', 'o', 'n'},
+		{'n', 'e', 't', 't', 'l', 'y'},
+		{'v', 'e', 'l', 'v', 'e', 't'},
+		{'w', 'h', 'i', 'n', 'g', 'e'},
+		{'g', 'e', 'r', 'b', 'i', 'l'},
+		{'h', 'a', 'r', 'b', 'o', 'r'},
+		{'b', 'a', 't', 'h', 'o', 's'},
+		{'t', 'a', 't', 't', 'o', 'o'},
+		{'a', 'c', 'e', 't', 'i', 'c'},
+		{'p', 'i', 't', 'h', 'o', 'n'},
+		{'x', 'i', 's', 't', 'y', 's'},
+		{'d', 'e', 'n', 'g', 'u', 'e'}
 	};
-	int index = rand() % 30;
-	string word[1][5] = {
-		extrememodewords[index][0], extrememodewords[index][1], extrememodewords[index][2], extrememodewords[index][3], extrememodewords[index][4]
-	};
+	extrememodeindex = rand() % 30;
+	word[1][0] = extrememodewords[extrememodeindex][0];
+	word[1][1] = extrememodewords[extrememodeindex][1];
+	word[1][2] = extrememodewords[extrememodeindex][2];
+	word[1][3] = extrememodewords[extrememodeindex][3];
+	word[1][4] = extrememodewords[extrememodeindex][4];
+	word[1][5] = extrememodewords[extrememodeindex][5];
 }
+
 char suggestionOne[1][6], suggestionTwo[1][6], suggestionThree[1][6], suggestionFour[1][6], suggestionFive[1][6];
+
 void ExtremeModeSuggestionFirst()
 {
 	cout << "\n-------------------------\n";
@@ -61,15 +68,15 @@ void ExtremeModeSuggestionFirst()
 	int count = 0;
 	for (int row = 0; row < 1; row++)
 	{
-		for (int col = 0; col < 4; col++)
+		for (int col = 0; col < 6; col++)
 		{
 			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[index][col])
+			if (suggestionOne[row][col] == word[extrememodeindex][col])
 			{
 				count++;
 			}
 		}
-		if (count == 5)
+		if (count == 6)
 		{
 			Win();
 		}
@@ -125,15 +132,15 @@ void ExtremeModeSuggestionSecond()
 	int count = 0;
 	for (int row = 0; row < 1; row++)
 	{
-		for (int col = 0; col < 4; col++)
+		for (int col = 0; col < 6; col++)
 		{
 			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[index][col])
+			if (suggestionOne[row][col] == word[extrememodeindex][col])
 			{
 				count++;
 			}
 		}
-		if (count == 5)
+		if (count == 6)
 		{
 			Win();
 		}
@@ -189,15 +196,15 @@ void ExtremeModeSuggestionThird()
 	int count = 0;
 	for (int row = 0; row < 1; row++)
 	{
-		for (int col = 0; col < 4; col++)
+		for (int col = 0; col < 6; col++)
 		{
 			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[index][col])
+			if (suggestionOne[row][col] == word[extrememodeindex][col])
 			{
 				count++;
 			}
 		}
-		if (count == 5)
+		if (count == 6)
 		{
 			Win();
 		}
@@ -253,15 +260,15 @@ void ExtremeModeSuggestionFourth()
 	int count = 0;
 	for (int row = 0; row < 1; row++)
 	{
-		for (int col = 0; col < 4; col++)
+		for (int col = 0; col < 6; col++)
 		{
 			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[index][col])
+			if (suggestionOne[row][col] == word[extrememodeindex][col])
 			{
 				count++;
 			}
 		}
-		if (count == 5)
+		if (count == 6)
 		{
 			Win();
 		}
@@ -317,15 +324,15 @@ void ExtremeModeSuggestionFifth()
 	int count = 0;
 	for (int row = 0; row < 1; row++)
 	{
-		for (int col = 0; col < 4; col++)
+		for (int col = 0; col < 6; col++)
 		{
 			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[index][col])
+			if (suggestionOne[row][col] == word[extrememodeindex][col])
 			{
 				count++;
 			}
 		}
-		if (count == 5)
+		if (count == 6)
 		{
 			Win();
 		}

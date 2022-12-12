@@ -5,45 +5,48 @@
 #include<iomanip>
 using namespace std;
 
+char word[1][4];
+int indexeasymode;
 void EasyGenerator()
 {
 	srand(time(NULL));
-	string easymodewords[30][4] = {
-		{"r", "a", "i", "n"}, 
-		{"p", "l", "a", "y"},
-		{"l", "e", "a", "n"},
-		{"s", "t", "a", "b"},
-		{"s", "e", "e", "d"},
-		{"t", "a", "p", "e"},
-		{"l", "a", "n", "d"},
-		{"b", "o", "w", "l"},
-		{"c", "a", "m", "p"},
-		{"f", "o", "r", "k"},
-		{"c", "r", "e", "w"},
-		{"d", "o", "o", "r"},
-		{"p", "a", "c", "k"},
-		{"h", "a", "n", "d"},
-		{"s", "o", "u", "r"},
-		{"c", "o", "s", "t"},
-		{"r", "a", "n", "k"},
-		{"s", "t", "a", "r"},
-		{"s", "c", "a", "r"},
-		{"w", "o", "o", "d"},
-		{"y", "e", "a", "r"},
-		{"m", "o", "o", "d"},
-		{"l", "o", "v", "e"},
-		{"l", "i", "k", "e"},
-		{"h", "a", "t", "e"},
-		{"n", "e", "a", "r"},
-		{"n", "a", "i", "l"},
-		{"h", "a", "i","r"},
-		{"s", "o", "r", "e"},
-		{"r", "a", "c", "e"}
+	char easymodewords[30][4] = {
+		{'r', 'a', 'i', 'n'},
+		{'p', 'l', 'a', 'y'},
+		{'l', 'e', 'a', 'n'},
+		{'s', 't', 'a', 'b'},
+		{'s', 'e', 'e', 'd'},
+		{'t', 'a', 'p', 'e'},
+		{'l', 'a', 'n', 'd'},
+		{'b', 'o', 'w', 'l'},
+		{'c', 'a', 'm', 'p'},
+		{'f', 'o', 'r', 'k'},
+		{'c', 'r', 'e', 'w'},
+		{'d', 'o', 'o', 'r'},
+		{'p', 'a', 'c', 'k'},
+		{'h', 'a', 'n', 'd'},
+		{'s', 'o', 'u', 'r'},
+		{'c', 'o', 's', 't'},
+		{'r', 'a', 'n', 'k'},
+		{'s', 't', 'a', 'r'},
+		{'s', 'c', 'a', 'r'},
+		{'w', 'o', 'o', 'd'},
+		{'y', 'e', 'a', 'r'},
+		{'m', 'o', 'o', 'd'},
+		{'l', 'o', 'v', 'e'},
+		{'l', 'i', 'k', 'e'},
+		{'h', 'a', 't', 'e'},
+		{'n', 'e', 'a', 'r'},
+		{'n', 'a', 'i', 'l'},
+		{'h', 'a', 'i','r'},
+		{'s', 'o', 'r', 'e'},
+		{'r', 'a', 'c', 'e'}
 	};
-	int index = rand() % 30;
-	string word[1][4] = {
-		easymodewords[index][0], easymodewords[index][1], easymodewords[index][2], easymodewords[index][3]
-	};
+	indexeasymode = rand() % 30;
+	word[1][0] = easymodewords[indexeasymode][0];
+	word[1][1] = easymodewords[indexeasymode][1];
+	word[1][2] = easymodewords[indexeasymode][2];
+	word[1][3] = easymodewords[indexeasymode][3];
 }
 char suggestionOne[1][4], suggestionTwo[1][4], suggestionThree[1][4], suggestionFour[1][4], suggestionFive[1][4];
 void EasySuggestionFirst()
@@ -64,12 +67,12 @@ void EasySuggestionFirst()
 		for (int col = 0; col < 4; col++)
 		{
 			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[index][col])
+			if (suggestionOne[row][col] == word[indexeasymode][col])
 			{
 				count++;
 			}
 		}
-		if (count == 5)
+		if (count == 4)
 		{
 			Win();
 		}
@@ -97,19 +100,6 @@ void EasyPrintFirstRow()
 	}
 	cout << "\n-----------------" << endl;
 }
-void EasyTableFirstPrint()
-{
-	for (int row = 0; row < 4; row++)
-	{
-		cout << "|";
-		for (int col = 0; col < 4; col++)
-		{
-			cout << setw(4) << "|";
-		}
-		cout << "\n-----------------" << endl;
-	}
-	ClearScreen();
-}
 void EasySuggestionSecond()
 {
 	for (int row = 0; row < 4; row++)
@@ -127,12 +117,12 @@ void EasySuggestionSecond()
 		for (int col = 0; col < 4; col++)
 		{
 			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[index][col])
+			if (suggestionOne[row][col] == word[indexeasymode][col])
 			{
 				count++;
 			}
 		}
-		if (count == 5)
+		if (count == 4)
 		{
 			Win();
 		}
@@ -160,19 +150,6 @@ void EasyPrintSecondRow()
 	}
 	cout << "\n-----------------" << endl;
 }
-void EasyTableSecondPrint()
-{
-	for (int row = 0; row < 3; row++)
-	{
-		cout << "|";
-		for (int col = 0; col < 4; col++)
-		{
-			cout << setw(4) << "|";
-		}
-		cout << "\n-----------------" << endl;
-	}
-	ClearScreen();
-}
 void EasySuggestionThird()
 {
 	for (int row = 0; row < 3; row++)
@@ -190,12 +167,12 @@ void EasySuggestionThird()
 		for (int col = 0; col < 4; col++)
 		{
 			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[index][col])
+			if (suggestionOne[row][col] == word[indexeasymode][col])
 			{
 				count++;
 			}
 		}
-		if (count == 5)
+		if (count == 4)
 		{
 			Win();
 		}
@@ -223,19 +200,6 @@ void EasyPrintThirdRow()
 	}
 	cout << "\n-----------------" << endl;
 }
-void EasyTableThirdPrint()
-{
-	for (int row = 0; row < 2; row++)
-	{
-		cout << "|";
-		for (int col = 0; col < 4; col++)
-		{
-			cout << setw(4) << "|";
-		}
-		cout << "\n-----------------" << endl;
-	}
-	ClearScreen();
-}
 void EasySuggestionFourth()
 {
 	for (int row = 0; row < 2; row++)
@@ -253,12 +217,12 @@ void EasySuggestionFourth()
 		for (int col = 0; col < 4; col++)
 		{
 			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[index][col])
+			if (suggestionOne[row][col] == word[indexeasymode][col])
 			{
 				count++;
 			}
 		}
-		if (count == 5)
+		if (count == 4)
 		{
 			Win();
 		}
@@ -286,19 +250,7 @@ void EasyPrintFourthRow()
 	}
 	cout << "\n-----------------" << endl;
 }
-void EasyTableFourthtPrint()
-{
-	for (int row = 0; row < 2; row++)
-	{
-		cout << "|";
-		for (int col = 0; col < 4; col++)
-		{
-			cout << setw(4) << "|";
-		}
-		cout << "-----------------" << endl;
-	}
-	ClearScreen();
-}
+
 void EasySuggestionFifth()
 {
 	for (int row = 0; row < 1; row++)
@@ -316,12 +268,12 @@ void EasySuggestionFifth()
 		for (int col = 0; col < 4; col++)
 		{
 			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[index][col])
+			if (suggestionOne[row][col] == word[indexeasymode][col])
 			{
 				count++;
 			}
 		}
-		if (count == 5)
+		if (count == 4)
 		{
 			Win();
 		}

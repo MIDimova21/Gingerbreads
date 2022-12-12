@@ -5,46 +5,51 @@
 #include<iomanip>
 using namespace std;
 
+char word[1][5];
+int advancedindex;
 void AdvancedGenerator()
 {
 	srand(time(NULL));
-	string advancedmodewords[30][5] = {
-		{"a", "l", "o", "n", "g"},
-		{"b", "a", "s", "e", "d"},
-		{"c", "h", "e", "a", "t"},
-		{"d", "i", "a", "r", "y"},
-		{"d", "e", "p", "o", "t"},
-		{"e", "n", "t", "e", "r"},		
-		{"l", "o", "v", "e", "r"},
-		{"b", "r", "e", "a", "k"},
-		{"o", "w", "n", "e", "r"},
-		{"c", "r", "o", "s", "s"},
-		{"c", "l", "o", "s", "e"},
-		{"f", "a", "u", "l", "t"},
-		{"f", "l", "a", "r", "e"},
-		{"l", "e", "d", "g", "e"},
-		{"m", "a", "n", "i", "a"},
-		{"m", "a", "y", "o", "r"},
-		{"m", "e", "r", "g", "e"},
-		{"s", "e", "n", "c", "e"},
-		{"w", "i", "n", "c", "e"},
-		{"s", "t", "a", "t", "e"},
-		{"h", "a", "u", "s", "e"},
-		{"d", "r", "i", "n", "k"},
-		{"q", "u", "o", "t", "e"},
-		{"q", "u", "a", "r", "t"},
-		{"u", "n", "t", "i", "l"},
-		{"y", "a", "c", "h", "t"},
-		{"r", "e", "p", "a", "y"},
-		{"o", "r", "b", "i", "t"},
-		{"o", "a", "s", "i", "s"},
-		{"s", "h", "a", "r", "k"},
+	char advancedmodewords[30][5] = {
+		{'a', 'l', 'o', 'n', 'g'},
+		{'b', 'a', 's', 'e', 'd'},
+		{'c', 'h', 'e', 'a', 't'},
+		{'d', 'i', 'a', 'r', 'y'},
+		{'d', 'e', 'p', 'o', 't'},
+		{'e', 'n', 't', 'e', 'r'},
+		{'l', 'o', 'v', 'e', 'r'},
+		{'b', 'r', 'e', 'a', 'k'},
+		{'o', 'w', 'n', 'e', 'r'},
+		{'c', 'r', 'o', 's', 's'},
+		{'c', 'l', 'o', 's', 'e'},
+		{'f', 'a', 'u', 'l', 't'},
+		{'f', 'l', 'a', 'r', 'e'},
+		{'l', 'e', 'd', 'g', 'e'},
+		{'m', 'a', 'n', 'i', 'a'},
+		{'m', 'a', 'y', 'o', 'r'},
+		{'m', 'e', 'r', 'g', 'e'},
+		{'s', 'e', 'n', 'c', 'e'},
+		{'w', 'i', 'n', 'c', 'e'},
+		{'s', 't', 'a', 't', 'e'},
+		{'h', 'a', 'u', 's', 'e'},
+		{'d', 'r', 'i', 'n', 'k'},
+		{'q', 'u', 'o', 't', 'e'},
+		{'q', 'u', 'a', 'r', 't'},
+		{'u', 'n', 't', 'i', 'l'},
+		{'y', 'a', 'c', 'h', 't'},
+		{'r', 'e', 'p', 'a', 'y'},
+		{'o', 'r', 'b', 'i', 't'},
+		{'o', 'a', 's', 'i', 's'},
+		{'s', 'h', 'a', 'r', 'k'}
 	};
-	int index = rand() % 30;
-	string word[1][5] = {
-		advancedmodewords[index][0], advancedmodewords[index][1], advancedmodewords[index][2], advancedmodewords[index][3], advancedmodewords[index][4]
-	};
+	advancedindex = rand() % 30;
+	word[1][0] = advancedmodewords[advancedindex][0];
+	word[1][1] = advancedmodewords[advancedindex][1];
+	word[1][2] = advancedmodewords[advancedindex][2];
+	word[1][3] = advancedmodewords[advancedindex][3];
+	word[1][4] = advancedmodewords[advancedindex][4];
 }
+
 char suggestionOne[1][5], suggestionTwo[1][5], suggestionThree[1][5], suggestionFour[1][5], suggestionFive[1][5];
 
 void AdvancedSuggestionFirst()
@@ -53,7 +58,7 @@ void AdvancedSuggestionFirst()
 	for (int row = 0; row < 5; row++)
 	{
 		cout << "|";
-		for (int col = 0; col < 5; col++)
+		for (int col = 0; col < 6; col++)
 		{
 			cout << setw(4) << "|";
 		}
@@ -62,10 +67,10 @@ void AdvancedSuggestionFirst()
 	int count = 0;
 	for (int row = 0; row < 1; row++)
 	{
-		for (int col = 0; col < 4; col++)
+		for (int col = 0; col < 5; col++)
 		{
 			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[index][col])
+			if (suggestionOne[row][col] == word[advancedindex][col])
 			{
 				count++;
 			}
@@ -126,10 +131,10 @@ void AdvancedSuggestionSecond()
 	int count = 0;
 	for (int row = 0; row < 1; row++)
 	{
-		for (int col = 0; col < 4; col++)
+		for (int col = 0; col < 5; col++)
 		{
 			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[index][col])
+			if (suggestionOne[row][col] == word[advancedindex][col])
 			{
 				count++;
 			}
@@ -190,10 +195,10 @@ void AdvancedSuggestionThird()
 	int count = 0;
 	for (int row = 0; row < 1; row++)
 	{
-		for (int col = 0; col < 4; col++)
+		for (int col = 0; col < 5; col++)
 		{
 			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[index][col])
+			if (suggestionOne[row][col] == word[advancedindex][col])
 			{
 				count++;
 			}
@@ -254,10 +259,10 @@ void AdvancedSuggestionFourth()
 	int count = 0;
 	for (int row = 0; row < 1; row++)
 	{
-		for (int col = 0; col < 4; col++)
+		for (int col = 0; col < 5; col++)
 		{
 			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[index][col])
+			if (suggestionOne[row][col] == word[advancedindex][col])
 			{
 				count++;
 			}
@@ -318,10 +323,10 @@ void AdvancedSuggestionFifth()
 	int count = 0;
 	for (int row = 0; row < 1; row++)
 	{
-		for (int col = 0; col < 4; col++)
+		for (int col = 0; col < 5; col++)
 		{
 			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[index][col])
+			if (suggestionOne[row][col] == word[advancedindex][col])
 			{
 				count++;
 			}

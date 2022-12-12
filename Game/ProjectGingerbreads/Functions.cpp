@@ -58,7 +58,7 @@ void Win()
 		Win();
 	}
 }
-void Lost(string word)
+void Lost()
 {
 	cout << endl;
 	cout << "$$\\            $$$$$           $$$$$$$$   $$$$$$$$$$$$\\" << endl;
@@ -73,7 +73,7 @@ void Lost(string word)
 	cout << "\\__________\\   \\_______/      /_________/     \\___/" << endl;
 	cout << "\n\n\n\n\n\n";
 
-	cout << "You lost. The word was " << word << endl;
+	cout << "You lost." << endl;
 	cout << "Press e to exit" << endl;
 
 	char wininput;
@@ -88,6 +88,6 @@ void Lost(string word)
 	{
 		ClearScreenMenu();
 		cout << "\nYou have entered an invalid option, please enter a valid one!\n";
-		Lost(word);
+		Lost();
 	}
 }
