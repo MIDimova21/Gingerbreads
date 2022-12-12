@@ -2,7 +2,7 @@
 <h1 align="center">Gingerbreads</h1>
 
 <p align = "center">
-  <img src="https://media.discordapp.net/attachments/1042104803301527595/1046542708753317978/Untitled_Project_2.jpg?width=670&height=670"/>
+  <img src="https://o.remove.bg/downloads/b0eb6701-7226-4e16-b51e-10bda87920b7/MicrosoftTeams-image__3_-removebg-preview.png"/>
 </p>
 
 <br>
