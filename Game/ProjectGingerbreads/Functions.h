@@ -4,8 +4,6 @@
 
 void ClearScreen();
 
-void Correct();
-
 void Contains();
 
 void DoesntContain();
