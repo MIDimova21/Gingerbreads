@@ -17,7 +17,7 @@
 
 ## 📋 Description
   
-The essence of this project was to create a C++ game based on . In the game you can choose between three game modes and one who is Christmas Edition. 
+The essence of this project was to create a C++ game based on wordplay. The game has 3 levels: easy, advanced and extreme. In the different levels the length of the word you need to guess is different and the difficulty increases with each level. You have 5 tries to guess the word that is given. After you enter the word every letter can appear with color. If a letter appears green, it means that the word contains that letter and it is in its right place. If a letter appears yellow, it means that the word contains that letter but it is in the wrong place. If non of the letters got displayed with a color, it means that the word does not contain any of the letters of the word you have entered. 
 
 ## 🚀 Languages 
   <p align="left"> 
