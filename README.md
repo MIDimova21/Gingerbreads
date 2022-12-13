@@ -2,7 +2,7 @@
 <h1 align="center">Gingerbreads</h1>
 
 <p align = "center">
-  <img src="https://o.remove.bg/downloads/b0eb6701-7226-4e16-b51e-10bda87920b7/MicrosoftTeams-image__3_-removebg-preview.png"/>
+  <img src="Logo/Untitled Project 2.jpg" alt="Gingerbreads's Logo"/>
 </p>
 
 <br>
