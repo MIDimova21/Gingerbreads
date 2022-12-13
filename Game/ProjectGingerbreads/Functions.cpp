@@ -15,8 +15,21 @@ void ClearScreen()
     displaymenu();
 }
 
+void SetColor(int color)
+{
+	if (SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color))
+	{
+		return;
+	}
+	else
+	{
+		SetColor(color);
+	}
+}
+
 void displaymenu()
 {
+	SetColor(AQUA);
 	cout << "                                                               " << endl;
 	cout << "   $$\\      $$\\                           $$\\    $$\\              " << endl;
 	cout << "   $$ | $\\  $$ |                          $$\\   |$$ |             " << endl;
@@ -30,6 +43,7 @@ void displaymenu()
 
 void Win()
 {
+	SetColor(GOLD);
 	cout << endl;
 	cout << "   $$\\      $$\\   $$\\   $$$\\     $$\\" << endl;
 	cout << "   $$ | $\\  $$ |  $$ |  $$$$$    $$ |" << endl;
@@ -41,6 +55,7 @@ void Win()
 	cout << "   \\__/     \\__|  \\__\\  \\__\\    \\__/\n" << endl;
 	cout << "\n\n\n\n\n\n";
 
+	SetColor(WHITE);
 	cout << "You won! Congratulations!" << endl;
 	cout << "Press e to exit" << endl;
 
@@ -62,6 +77,7 @@ void Win()
 
 void Lost()
 {
+	SetColor(RED);
 	cout << endl;
 	cout << "$$\\            $$$$$           $$$$$$$$   $$$$$$$$$$$$\\" << endl;
 	cout << "$$ |\\        $$$$$$$$\\       $$$$$$    $$      $$ \\---/" << endl;
@@ -75,6 +91,7 @@ void Lost()
 	cout << "\\__________\\   \\_______/      /_________/     \\___/" << endl;
 	cout << "\n\n\n\n\n\n";
 
+	SetColor(WHITE);
 	cout << "You lost." << endl;
 	cout << "Press e to exit" << endl;
 
@@ -94,20 +111,9 @@ void Lost()
 	}
 }
 
-void SetColor(int color)
-{
-	if (SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color))
-	{
-		return;
-	}
-	else
-	{
-		SetColor(color);
-	}
-}
-
 void EnterSuggestion(int length, char suggestion[])
 {
+	SetColor(WHITE);
 	for (int i = 0; i < length; i++)
 	{
 		cin >> suggestion[i];
@@ -145,10 +151,12 @@ void PrintSuggestion(int lenght, int countofcontains, int countofcontainsinright
 			}
 			
 		}
-		cout << suggest[i] << "|";
+		cout << suggest[i];
+		SetColor(WHITE);
+		cout << "|";
 		if (countofcontainsinrightplace == lenght)
 		{
-				Win();
+			Win();
 		}
 		else if (i == lenght && countofcontainsinrightplace != lenght)
 		{

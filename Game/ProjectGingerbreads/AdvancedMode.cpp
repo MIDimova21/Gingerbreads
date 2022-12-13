@@ -2,7 +2,7 @@
 #include "../ProjectGingerbreads/Menu.h"
 #include "../ProjectGingerbreads/Functions.h"
 
-char word[5];
+char advancedmodeword[5];
 void AdvancedGenerator(char word[])
 {
 	srand(time(NULL));
@@ -39,32 +39,30 @@ void AdvancedGenerator(char word[])
 		{'s', 'h', 'a', 'r', 'k'}
 	};
 	int advancedindex = rand() % 30;
-	word[0] = advancedmodewords[advancedindex][0];
-	word[1] = advancedmodewords[advancedindex][1];
-	word[2] = advancedmodewords[advancedindex][2];
-	word[3] = advancedmodewords[advancedindex][3];
-	word[4] = advancedmodewords[advancedindex][4];
+	advancedmodeword[0] = advancedmodewords[advancedindex][0];
+	advancedmodeword[1] = advancedmodewords[advancedindex][1];
+	advancedmodeword[2] = advancedmodewords[advancedindex][2];
+	advancedmodeword[3] = advancedmodewords[advancedindex][3];
+	advancedmodeword[4] = advancedmodewords[advancedindex][4];
+
 }
 
-char suggestionOne[5], suggestionTwo[5], suggestionThree[5], suggestionFour[5], suggestionFive[5], doesntcontain[5], contains[5], containsrightplace[5];
-int lenght = 5, i, countdoesntcontain = 0, countofcontains = 0, countofcontainsinrightplace = 0;
+char advancedmodesuggestionOne[5], advancedmodesuggestionTwo[5], advancedmodesuggestionThree[5], advancedmodesuggestionFour[5], advancedmodesuggestionFive[5], 
+	advancedmodedoesntcontain[5], advancedmodecontains[5], advancedmodecontainsrightplace[5];
+int advancedmodelenght = 5, advancedmodecountsdoesntcontain = 0, advancedmodecountofcontains = 0, advancedmodecountofcontainsinrightplace = 0;
 
 void AdvancedMode()
 {
-	AdvancedGenerator(word);
-	EnterSuggestion(lenght, suggestionOne);
-	CheckIfContains(word, lenght, suggestionFour, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
-	PrintSuggestion(lenght, suggestionOne);
-	EnterSuggestion(lenght, suggestionTwo);
-	CheckIfContains(word, lenght, suggestionFour, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
-	PrintSuggestion(lenght, suggestionTwo);
-	EnterSuggestion(lenght, suggestionThree);
-	CheckIfContains(word, lenght, suggestionFour, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
-	PrintSuggestion(lenght, suggestionThree);
-	EnterSuggestion(lenght, suggestionFour);
-	CheckIfContains(word, lenght, suggestionFour, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
-	PrintSuggestion(lenght, suggestionFour);
-	EnterSuggestion(lenght, suggestionFive);
-	CheckIfContains(word, lenght, suggestionFour, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
-	PrintSuggestion(lenght, suggestionFive);
+	displaymenu();
+	AdvancedGenerator(advancedmodeword);
+	EnterSuggestion(advancedmodelenght, advancedmodesuggestionOne);
+	PrintSuggestion(advancedmodelenght, advancedmodecountofcontains, advancedmodecountofcontainsinrightplace, advancedmodecountsdoesntcontain, advancedmodecontains, advancedmodecontainsrightplace, advancedmodedoesntcontain, advancedmodesuggestionOne, advancedmodeword);
+	EnterSuggestion(advancedmodelenght, advancedmodesuggestionTwo);
+	PrintSuggestion(advancedmodelenght, advancedmodecountofcontains, advancedmodecountofcontainsinrightplace, advancedmodecountsdoesntcontain, advancedmodecontains, advancedmodecontainsrightplace, advancedmodedoesntcontain, advancedmodesuggestionTwo, advancedmodeword);
+	EnterSuggestion(advancedmodelenght, advancedmodesuggestionThree);
+	PrintSuggestion(advancedmodelenght, advancedmodecountofcontains, advancedmodecountofcontainsinrightplace, advancedmodecountsdoesntcontain, advancedmodecontains, advancedmodecontainsrightplace, advancedmodedoesntcontain, advancedmodesuggestionThree, advancedmodeword);
+	EnterSuggestion(advancedmodelenght, advancedmodesuggestionFour);
+	PrintSuggestion(advancedmodelenght, advancedmodecountofcontains, advancedmodecountofcontainsinrightplace, advancedmodecountsdoesntcontain, advancedmodecontains, advancedmodecontainsrightplace, advancedmodedoesntcontain, advancedmodesuggestionFour, advancedmodeword);
+	EnterSuggestion(advancedmodelenght, advancedmodesuggestionFive);
+	PrintSuggestion(advancedmodelenght, advancedmodecountofcontains, advancedmodecountofcontainsinrightplace, advancedmodecountsdoesntcontain, advancedmodecontains, advancedmodecontainsrightplace, advancedmodedoesntcontain, advancedmodesuggestionFive, advancedmodeword);
 }

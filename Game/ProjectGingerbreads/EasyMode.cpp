@@ -2,7 +2,7 @@
 #include "../ProjectGingerbreads/Menu.h"
 #include "../ProjectGingerbreads/Functions.h"
 
-char word[4];
+char easymodeword[4];
 
 void EasyGenerator(char word[])
 {
@@ -40,31 +40,28 @@ void EasyGenerator(char word[])
 		{'r', 'a', 'c', 'e'}
 	};
 	int indexeasymode = rand() % 30;
-	word[0] = easymodewords[indexeasymode][0];
-	word[1] = easymodewords[indexeasymode][1];
-	word[2] = easymodewords[indexeasymode][2];
-	word[3] = easymodewords[indexeasymode][3];
+	easymodeword[0] = easymodewords[indexeasymode][0];
+	easymodeword[1] = easymodewords[indexeasymode][1];
+	easymodeword[2] = easymodewords[indexeasymode][2];
+	easymodeword[3] = easymodewords[indexeasymode][3];
 }
 
-char suggestionOne[4], suggestionTwo[4], suggestionThree[4], suggestionFour[4], suggestionFive[4], doesntcontain[4], contains[4], containsrightplace[4];
-int lenght = 4, i, countdoesntcontain = 0, countofcontains = 0, countofcontainsinrightplace = 0;
+char easymodesuggestionOne[4], easymodesuggestionTwo[4], easymodesuggestionThree[4], easymodesuggestionFour[4], easymodesuggestionFive[4],
+	easymodedoesntcontain[4], easymodecontains[4], easymodecontainsrightplace[4];
+int easymodelenght = 4, easymodecountsdoesntcontain = 0, easymodecountofcontains = 0, easymodecountofcontainsinrightplace = 0;
 
 void EasyMode()
 {
-	EasyGenerator(word);
-	EnterSuggestion(lenght, suggestionOne);
-	CheckIfContains(word, lenght, suggestionOne, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
-	PrintSuggestion(lenght, suggestionOne);
-	EnterSuggestion(lenght, suggestionTwo);
-	CheckIfContains(word, lenght, suggestionTwo, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
-	PrintSuggestion(lenght, suggestionTwo);
-	EnterSuggestion(lenght, suggestionThree);
-	CheckIfContains(word, lenght, suggestionThree, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
-	PrintSuggestion(lenght, suggestionThree);
-	EnterSuggestion(lenght, suggestionFour);
-	CheckIfContains(word, lenght, suggestionFour, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
-	PrintSuggestion(lenght, suggestionFour);
-	EnterSuggestion(lenght, suggestionFive);
-	CheckIfContains(word, lenght, suggestionFour, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
-	PrintSuggestion(lenght, suggestionFive);
+	displaymenu();
+	EasyGenerator(easymodeword);
+	EnterSuggestion(easymodelenght, easymodesuggestionOne);
+	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionOne, easymodeword);
+	EnterSuggestion(easymodelenght, easymodesuggestionTwo);
+	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionTwo, easymodeword);
+	EnterSuggestion(easymodelenght, easymodesuggestionThree);
+	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionThree, easymodeword);
+	EnterSuggestion(easymodelenght, easymodesuggestionFour);
+	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionFour, easymodeword);
+	EnterSuggestion(easymodelenght, easymodesuggestionFive);
+	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionFive, easymodeword);
 }

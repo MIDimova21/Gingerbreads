@@ -4,10 +4,12 @@
 #include<Windows.h>
 #include<iomanip>
 
-#define GREEN 0
+#define GREEN 2
+#define DARKBLUE 1
 #define RED 4
 #define WHITE 7
 #define GOLD 6
+#define AQUA 3
 
 using namespace std;
 
@@ -25,12 +27,4 @@ void SetColor(int color);
 
 void EnterSuggestion(int length, char suggestion[]);
 
-void ContainsRightPlace(int countofcontainsinrightplace, char containsrightplace[], char suggest, int i);
-
-void Contains(int length, int countofcontains, char contains[], char suggest, int i);
-
-void DoesntContain(int length, int countdoesntcontain, char doesntcontain[], char suggest, int i);
-
-void CheckIfContains(char word[], int i, int lenght, int suggestion, char doesntcontain[], char contains[], char containsrightplace[], int countdoesntcontain, int countofcontains, int countofcontainsinrightplace);
-
-void PrintSuggestion(int length, char suggestion[]);
+void PrintSuggestion(int lenght, int countofcontains, int countofcontainsinrightplace, int countsdoesntcontain, char contains[], char containsrightpplace[], char doesntcontain[], char suggestion[], char word[]);

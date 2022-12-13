@@ -11,11 +11,13 @@ void start()
 	string confirm;
 	int yourchoice;
 
+	SetColor(GREEN);
 	cout << "1. Easy Mode" << endl;
 	cout << "2. Advanced Mode" << endl;
 	cout << "3. Extreme Mode" << endl;
 	do
 	{
+		SetColor(GOLD);
 		cout << "\nEnter your choice:\n";
 		cin >> yourchoice;
 		cout << "\nPress y to confirm \n";

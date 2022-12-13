@@ -2,7 +2,7 @@
 #include "../ProjectGingerbreads/Menu.h"
 #include "../ProjectGingerbreads/Functions.h"
 
-char word[6];
+char extrememodeword[6];
 void ExtremeGenerator(char word[])
 {
 	srand(time(NULL));
@@ -40,33 +40,30 @@ void ExtremeGenerator(char word[])
 	};
 	int extrememodeindex = rand() % 30;
 
-	word[0] = extrememodewords[extrememodeindex][0];
-	word[1] = extrememodewords[extrememodeindex][1];
-	word[2] = extrememodewords[extrememodeindex][2];
-	word[3] = extrememodewords[extrememodeindex][3];
-	word[4] = extrememodewords[extrememodeindex][4];
-	word[5] = extrememodewords[extrememodeindex][5];
+	extrememodeword[0] = extrememodewords[extrememodeindex][0];
+	extrememodeword[1] = extrememodewords[extrememodeindex][1];
+	extrememodeword[2] = extrememodewords[extrememodeindex][2];
+	extrememodeword[3] = extrememodewords[extrememodeindex][3];
+	extrememodeword[4] = extrememodewords[extrememodeindex][4];
+	extrememodeword[5] = extrememodewords[extrememodeindex][5];
 }
 
-char suggestionOne[6], suggestionTwo[6], suggestionThree[6], suggestionFour[6], suggestionFive[6], doesntcontain[6], contains[6], containsrightplace[6];
-int lenght = 6, i, countdoesntcontain = 0, countofcontains = 0, countofcontainsinrightplace = 0;
+char extrememodesuggestionOne[6], extrememodesuggestionTwo[6], extrememodesuggestionThree[6], extrememodesuggestionFour[6], extrememodesuggestionFive[6],
+	extrememodedoesntcontain[6], extrememodecontains[6], extrememodecontainsrightplace[6];
+int extrememodelenght = 6, extrememodecountsdoesntcontain, extrememodecountofcontains, extrememodecountofcontainsinrightplace;
 
 void ExtremeMode()
 {
-	ExtremeGenerator(word);
-	EnterSuggestion(lenght, suggestionOne);
-	CheckIfContains(lenght, i, suggestionOne, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
-	PrintSuggestion(lenght, suggestionOne);
-	EnterSuggestion(lenght, suggestionTwo);
-	CheckIfContains(lenght, i, suggestionTwo, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
-	PrintSuggestion(lenght, suggestionTwo);
-	EnterSuggestion(lenght, suggestionThree);
-	CheckIfContains(lenght, i, suggestionThree, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
-	PrintSuggestion(lenght, suggestionThree);
-	EnterSuggestion(lenght, suggestionFour);
-	CheckIfContains(lenght, i, suggestionFour, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
-	PrintSuggestion(lenght, suggestionFour);
-	EnterSuggestion(lenght, suggestionFive);
-	CheckIfContains(lenght, i, suggestionFive, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
-	PrintSuggestion(lenght, suggestionFive);
+	displaymenu();
+	ExtremeGenerator(extrememodeword);
+	EnterSuggestion(extrememodelenght, extrememodesuggestionOne);
+	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionOne, extrememodeword);
+	EnterSuggestion(extrememodelenght, extrememodesuggestionTwo);
+	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionTwo, extrememodeword);
+	EnterSuggestion(extrememodelenght, extrememodesuggestionThree);
+	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionThree, extrememodeword);
+	EnterSuggestion(extrememodelenght, extrememodesuggestionFour);
+	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionFour, extrememodeword);
+	EnterSuggestion(extrememodelenght, extrememodesuggestionFive);
+	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionFive, extrememodeword);
 }
