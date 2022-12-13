@@ -106,24 +106,6 @@ void SetColor(int color)
 	}
 }
 
-void Hint(char word[])
-{
-	srand(time(0));
-	unsigned int r = rand() % 2;
-	string wordpicked = word[r];
-	int n = wordpicked.size();
-	string scrambleword = wordpicked;
-	for (int i = 0; i < 50; i++)
-	{
-		for (int i = 0; i < n; i++)
-		{
-			swap(scrambleword[i], scrambleword[rand() % n]);
-		}
-	}
-
-	cout << scrambleword << endl;
-}
-
 void EnterSuggestion(int length, char suggestion[])
 {
 	for (int i = 0; i < length; i++)
@@ -132,54 +114,46 @@ void EnterSuggestion(int length, char suggestion[])
 	}
 }
 
-void ContainsRightPlace(int countofcontainsinrightplace, char containsrightplace[], char suggest, int i)
+void PrintSuggestion(int lenght, int countofcontains, int countofcontainsinrightplace, int countdoesntcontain, char contains[], char containsinrightplace[], char doesntcontain[], char suggest[], char word[])
 {
-	containsrightplace[countofcontainsinrightplace] = suggest[i];
-	countofcontainsinrightplace++;
-}
+	countofcontains = 0;	
+	countofcontainsinrightplace = 0; 
+	countdoesntcontain = 0;
 
-void Contains(int length, int countofcontains, char contains[], char suggest, int i)
-{
-	contains[countofcontains] = suggest[i];
-	countofcontains++;
-}
-
-void DoesntContain(int length, int countdoesntcontain, char doesntcontain[], char suggest, int i)
-{
-	doesntcontain[countdoesntcontain] = suggest[i]
-	countdoesntcontain++;
-}
-
-void CheckIfContains(char word[], int i, int lenght, int suggestion, char doesntcontain[], char contains[], char containsrightplace[], int countdoesntcontain, int countofcontains, int countofcontainsinrightplace)
-{
-	for (i = 0; i < length; i++)
+	cout << "-------------------------\n|";
+	for (int i = 0; i < lenght; i++)
 	{
-		cout << "-------------------------\n";
-		for (int j = 0; j < length; j++)
+		for (int j = 0; j < lenght; j++)
 		{
-			if ((int)suggestion[i] == (int)word[j] && (int)suggestion[i] != (int)word[i]))
+			if ((int)suggest[i] == (int)word[j] && (int)suggest[i] != (int)word[i])
 			{
 				SetColor(GOLD);
-				Contains(length, countofcontains, contains, suggest, i);
+				contains[countofcontains] = suggest[i];
+				countofcontains++;
 			}
-			else if ((int)suggestion[i] == (int)word[j])
+			else if ((int)suggest[i] == (int)word[j])
 			{
 				SetColor(GREEN);
-				ContainsRightPlace(length, countofcontainsinrightplace, containsrightplace, suggest, i)
+				containsinrightplace[countofcontainsinrightplace] = suggest[i];
+				countofcontainsinrightplace++;
 			}
-			else 
+			else
 			{
 				SetColor(RED);
-				DoesntContain(length, countdoesntcontain. doesntcontain, suggest, i)
+				doesntcontain[countdoesntcontain] = suggest[i];
+				countdoesntcontain++;
 			}
-			cout << suggestion[i] << "|";
-			cout << "\n-------------------------\n";
-			if(countsofright == lenght)
-			{
+			
+		}
+		cout << suggest[i] << "|";
+		if (countofcontainsinrightplace == lenght)
+		{
 				Win();
-			}
-}
-void PrintSuggestion(int length, char suggestion[])
-{
-	CheckIfContains(int lenght, char suggestion[], char word[]);
+		}
+		else if (i == lenght && countofcontainsinrightplace != lenght)
+		{
+			Lost();
+		}
+	}
+	cout << "\n-------------------------\n";
 }
