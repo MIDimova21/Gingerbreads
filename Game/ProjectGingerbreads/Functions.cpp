@@ -150,7 +150,7 @@ void DoesntContain(int length, int countdoesntcontain, char doesntcontain[], cha
 	countdoesntcontain++;
 }
 
-void CheckIfContains(char word[], int lenght, int suggestion, char doesntcontain[], char contains[], char containsrightplace[], int countdoesntcontain, int countofcontains, int countofcontainsinrightplace)
+void CheckIfContains(char word[], int i, int lenght, int suggestion, char doesntcontain[], char contains[], char containsrightplace[], int countdoesntcontain, int countofcontains, int countofcontainsinrightplace)
 {
 	for (i = 0; i < length; i++)
 	{
