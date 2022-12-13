@@ -31,6 +31,6 @@ void Contains(int length, int countofcontains, char contains[], char suggest, in
 
 void DoesntContain(int length, int countdoesntcontain, char doesntcontain[], char suggest, int i);
 
-void CheckIfContains(char word[], int lenght, int suggestion, char doesntcontain[], char contains[], char containsrightplace[], int countdoesntcontain, int countofcontains, int countofcontainsinrightplace);
+void CheckIfContains(char word[], int i, int lenght, int suggestion, char doesntcontain[], char contains[], char containsrightplace[], int countdoesntcontain, int countofcontains, int countofcontainsinrightplace);
 
 void PrintSuggestion(int length, char suggestion[]);
