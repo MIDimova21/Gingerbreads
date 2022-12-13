@@ -55,18 +55,18 @@ void ExtremeMode()
 {
 	ExtremeGenerator(word);
 	EnterSuggestion(lenght, suggestionOne);
-	CheckIfContains(lenght, suggestionOne, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
+	CheckIfContains(lenght, i, suggestionOne, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
 	PrintSuggestion(lenght, suggestionOne);
 	EnterSuggestion(lenght, suggestionTwo);
-	CheckIfContains(lenght, suggestionTwo, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
+	CheckIfContains(lenght, i, suggestionTwo, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
 	PrintSuggestion(lenght, suggestionTwo);
 	EnterSuggestion(lenght, suggestionThree);
-	CheckIfContains(lenght, suggestionThree, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
+	CheckIfContains(lenght, i, suggestionThree, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
 	PrintSuggestion(lenght, suggestionThree);
 	EnterSuggestion(lenght, suggestionFour);
-	CheckIfContains(lenght, suggestionFour, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
+	CheckIfContains(lenght, i, suggestionFour, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
 	PrintSuggestion(lenght, suggestionFour);
 	EnterSuggestion(lenght, suggestionFive);
-	CheckIfContains(lenght, suggestionFive, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
+	CheckIfContains(lenght, i, suggestionFive, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
 	PrintSuggestion(lenght, suggestionFive);
 }
