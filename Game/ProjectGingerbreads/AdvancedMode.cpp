@@ -1,13 +1,9 @@
 #include "../ProjectGingerbreads/AdvancedMode.h"
 #include "../ProjectGingerbreads/Menu.h"
 #include "../ProjectGingerbreads/Functions.h"
-#include<iostream>
-#include<iomanip>
-using namespace std;
 
-char word[1][5];
-int advancedindex;
-void AdvancedGenerator()
+char word[5];
+void AdvancedGenerator(char word[])
 {
 	srand(time(NULL));
 	char advancedmodewords[30][5] = {
@@ -42,331 +38,33 @@ void AdvancedGenerator()
 		{'o', 'a', 's', 'i', 's'},
 		{'s', 'h', 'a', 'r', 'k'}
 	};
-	advancedindex = rand() % 30;
-	word[1][0] = advancedmodewords[advancedindex][0];
-	word[1][1] = advancedmodewords[advancedindex][1];
-	word[1][2] = advancedmodewords[advancedindex][2];
-	word[1][3] = advancedmodewords[advancedindex][3];
-	word[1][4] = advancedmodewords[advancedindex][4];
+	int advancedindex = rand() % 30;
+	word[0] = advancedmodewords[advancedindex][0];
+	word[1] = advancedmodewords[advancedindex][1];
+	word[2] = advancedmodewords[advancedindex][2];
+	word[3] = advancedmodewords[advancedindex][3];
+	word[4] = advancedmodewords[advancedindex][4];
 }
 
-char suggestionOne[1][5], suggestionTwo[1][5], suggestionThree[1][5], suggestionFour[1][5], suggestionFive[1][5];
+char suggestionOne[5], suggestionTwo[5], suggestionThree[5], suggestionFour[5], suggestionFive[5], doesntcontain[5], contains[5], containsrightplace[5];
+int lenght = 5, i, countdoesntcontain = 0, countofcontains = 0, countofcontainsinrightplace = 0;
 
-void AdvancedSuggestionFirst()
-{
-	cout << "\n---------------------\n";
-	for (int row = 0; row < 5; row++)
-	{
-		cout << "|";
-		for (int col = 0; col < 6; col++)
-		{
-			cout << setw(4) << "|";
-		}
-		cout << "\n---------------------\n";
-	}
-	int count = 0;
-	for (int row = 0; row < 1; row++)
-	{
-		for (int col = 0; col < 5; col++)
-		{
-			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[advancedindex][col])
-			{
-				++count;
-			}
-		}
-		if (count == 5)
-		{
-			Win();
-		}
-		else if (count >= 1)
-		{
-			Contains();
-		}
-		else
-		{
-			DoesntContain();
-		}
-		ClearScreen();
-	}
-	ClearScreen();
-}
-void AdvancedPrintFirstRow()
-{
-	cout << "\n---------------------\n";
-	for (int row = 0; row < 1; row++)
-	{
-		cout << "|";
-		for (int col = 0; col < 5; col++)
-		{
-			cout << setw(2) << suggestionOne[row][col] << setw(2) << "|";
-		}
-	}
-	cout << "\n---------------------" << endl;
-}
-void AdvancedTableFirstPrint()
-{
-	for (int row = 0; row < 4; row++)
-	{
-		cout << "|";
-		for (int col = 0; col < 5; col++)
-		{
-			cout << setw(4) << "|";
-		}
-		cout << "\n---------------------" << endl;
-	}
-	ClearScreen();
-}
-void AdvancedSuggestionSecond()
-{
-	for (int row = 0; row < 4; row++)
-	{
-		cout << "|";
-		for (int col = 0; col < 5; col++)
-		{
-			cout << setw(4) << "|";
-		}
-		cout << "\n---------------------\n";
-	}
-	int count = 0;
-	for (int row = 0; row < 1; row++)
-	{
-		for (int col = 0; col < 5; col++)
-		{
-			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[advancedindex][col])
-			{
-				count++;
-			}
-		}
-		if (count == 5)
-		{
-			Win();
-		}
-		else if (count >= 1)
-		{
-			Contains();
-		}
-		else
-		{
-			DoesntContain();
-		}
-		ClearScreen();
-	}
-	ClearScreen();
-}
-void AdvancedPrintSecondRow()
-{
-	AdvancedPrintFirstRow();
-	for (int row = 0; row < 1; row++)
-	{
-		cout << "|";
-		for (int col = 0; col < 5; col++)
-		{
-			cout << setw(2) << suggestionTwo[row][col] << setw(2) << "|";
-		}
-	}
-	cout << "\n---------------------" << endl;
-}
-void AdvancedTableSecondPrint()
-{
-	for (int row = 0; row < 3; row++)
-	{
-		cout << "|";
-		for (int col = 0; col < 5; col++)
-		{
-			cout << setw(4) << "|";
-		}
-		cout << "\n---------------------" << endl;
-	}
-	ClearScreen();
-}
-void AdvancedSuggestionThird()
-{
-	for (int row = 0; row < 3; row++)
-	{
-		cout << "|";
-		for (int col = 0; col < 5; col++)
-		{
-			cout << setw(4) << "|";
-		}
-		cout << "\n---------------------\n";
-	}
-	int count = 0;
-	for (int row = 0; row < 1; row++)
-	{
-		for (int col = 0; col < 5; col++)
-		{
-			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[advancedindex][col])
-			{
-				count++;
-			}
-		}
-		if (count == 5)
-		{
-			Win();
-		}
-		else if (count >= 1)
-		{
-			Contains();
-		}
-		else
-		{
-			DoesntContain();
-		}
-		ClearScreen();
-	}
-	ClearScreen();
-}
-void AdvancedPrintThirdRow()
-{
-	AdvancedPrintSecondRow();
-	for (int row = 0; row < 1; row++)
-	{
-		cout << "|";
-		for (int col = 0; col < 5; col++)
-		{
-			cout << setw(2) << suggestionThree[row][col] << setw(2) << "|";
-		}
-	}
-	cout << "\n---------------------" << endl;
-}
-void AdvancedTableThirdPrint()
-{
-	for (int row = 0; row < 2; row++)
-	{
-		cout << "|";
-		for (int col = 0; col < 5; col++)
-		{
-			cout << setw(4) << "|";
-		}
-		cout << "\n---------------------" << endl;
-	}
-	ClearScreen();
-}
-void AdvancedSuggestionFourth()
-{
-	for (int row = 0; row < 2; row++)
-	{
-		cout << "|";
-		for (int col = 0; col < 5; col++)
-		{
-			cout << setw(4) << "|";
-		}
-		cout << "\n---------------------\n";
-	}
-	int count = 0;
-	for (int row = 0; row < 1; row++)
-	{
-		for (int col = 0; col < 5; col++)
-		{
-			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[advancedindex][col])
-			{
-				count++;
-			}
-		}
-		if (count == 5)
-		{
-			Win();
-		}
-		else if (count >= 1)
-		{
-			Contains();
-		}
-		else
-		{
-			DoesntContain();
-		}
-		ClearScreen();
-	}
-	ClearScreen();
-}
-void AdvancedPrintFourthRow()
-{
-	AdvancedPrintThirdRow();
-	for (int row = 0; row < 1; row++)
-	{
-		cout << "|";
-		for (int col = 0; col < 5; col++)
-		{
-			cout << setw(2) << suggestionFour[row][col] << setw(2) << "|";
-		}
-	}
-	cout << "\n---------------------" << endl;
-}
-void AdvancedTableFourthtPrint()
-{
-	for (int row = 0; row < 2; row++)
-	{
-		cout << "|";
-		for (int col = 0; col < 5; col++)
-		{
-			cout << setw(4) << "|";
-		}
-		cout << "---------------------" << endl;
-	}
-	ClearScreen();
-}
-void AdvancedSuggestionFifth()
-{
-	for (int row = 0; row < 1; row++)
-	{
-		cout << "|";
-		for (int col = 0; col < 5; col++)
-		{
-			cout << setw(4) << "|";
-		}
-		cout << "\n---------------------\n";
-	}
-	int count = 0;
-	for (int row = 0; row < 1; row++)
-	{
-		for (int col = 0; col < 5; col++)
-		{
-			cin >> suggestionOne[row][col];
-			if (suggestionOne[row][col] == word[advancedindex][col])
-			{
-				count++;
-			}
-		}
-		if (count == 5)
-		{
-			Win();
-		}
-		else
-		{
-			Lost();
-		}
-		ClearScreen();
-	}
-	ClearScreen();
-}
-void AdvancedPrintFifthRow()
-{
-	AdvancedPrintFourthRow();
-	for (int row = 0; row < 1; row++)
-	{
-		cout << "|";
-		for (int col = 0; col < 5; col++)
-		{
-			cout << setw(2) << suggestionFive[row][col] << setw(2) << "|";
-		}
-	}
-	cout << "\n---------------------" << endl;
-}
 void AdvancedMode()
 {
-	displaymenu();
-	AdvancedSuggestionFirst();
-	AdvancedPrintFirstRow();
-	AdvancedSuggestionSecond();
-	AdvancedPrintSecondRow();
-	AdvancedSuggestionThird();
-	AdvancedPrintThirdRow();
-	AdvancedSuggestionFourth();
-	AdvancedPrintFourthRow();
-	AdvancedSuggestionFifth();
-	AdvancedPrintFifthRow();
+	AdvancedGenerator(word);
+	EnterSuggestion(lenght, suggestionOne);
+	CheckIfContains(word, lenght, suggestionFour, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
+	PrintSuggestion(lenght, suggestionOne);
+	EnterSuggestion(lenght, suggestionTwo);
+	CheckIfContains(word, lenght, suggestionFour, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
+	PrintSuggestion(lenght, suggestionTwo);
+	EnterSuggestion(lenght, suggestionThree);
+	CheckIfContains(word, lenght, suggestionFour, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
+	PrintSuggestion(lenght, suggestionThree);
+	EnterSuggestion(lenght, suggestionFour);
+	CheckIfContains(word, lenght, suggestionFour, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
+	PrintSuggestion(lenght, suggestionFour);
+	EnterSuggestion(lenght, suggestionFive);
+	CheckIfContains(word, lenght, suggestionFour, doesntcontain, contains, containsrightplace, countdoesntcontain, countofcontains, countofcontainsinrightplace);
+	PrintSuggestion(lenght, suggestionFive);
 }

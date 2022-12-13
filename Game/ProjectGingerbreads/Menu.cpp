@@ -3,22 +3,7 @@
 #include "../ProjectGingerbreads/EasyMode.h"
 #include "../ProjectGingerbreads/AdvancedMode.h"
 #include "../ProjectGingerbreads/ExtremeMode.h"
-#include<iostream>
-#include<iomanip>
-using namespace std;
 
-void displaymenu()
-{
-	cout << "                                                               " << endl;
-	cout << "   $$\\      $$\\                           $$\\    $$\\              " << endl;
-	cout << "   $$ | $\\  $$ |                          $$\\   |$$ |             " << endl;
-	cout << "   $$ |$$$\\ $$ | $$$$$$\\   $$$$$$\\   $$$$$$$\\   |$$ | $$$$$$\\     " << endl;
-	cout << "   $$ $$ $$\\$$ |$$  __$$\\ $$  __$$\\ $$  ___$$\\  |$$ |$$  __$$\\    " << endl;
-	cout << "   $$$$  _$$$$ |$$ /  $$ |$$ |  \\__|$$ /   |$$\\ |$$ |$$$$$$$$ |   " << endl;
-	cout << "   $$$  / \\$$$ |$$ |  $$ |$$ | |    $$ |   |$$\\ |$$ |$$   ____|   " << endl;
-	cout << "   $$   /   \\$$ |\\$$$$$$  |$$ |      \\$$$$$$$$\\ |$$ |\\$$$$$$$\\    " << endl;
-	cout << "   \\__/     \\__| \\______/ \\__|       \\____\\___|\\____| \\_______|   \n" << endl;
-}
 
 void start()
 {

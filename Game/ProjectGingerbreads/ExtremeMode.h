@@ -1,27 +1,10 @@
 #pragma once
 
 #include<iostream>
+#include<iomanip>
 
-void ExtremeGenerator();
+using namespace std;
+
+void ExtremeGenerator(char word[]);
 
 void ExtremeMode();
-
-void ExtremeModeSuggestionFirst();
-
-void ExtremeModePrintFirstRow();
-
-void ExtremeModeSuggestionSecond();
-
-void ExtremeModePrintSecondRow();
-
-void ExtremeModeSuggestionThird();
-
-void ExtremeModePrintThirdRow();
-
-void ExtremeModeSuggestionFourth();
-
-void ExtremeModePrintFourthRow();
-
-void ExtremeModeSuggestionFifth();
-
-void ExtremeModePrintFifthRow();
