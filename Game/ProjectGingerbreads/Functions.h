@@ -27,4 +27,4 @@ void SetColor(int color);
 
 void EnterSuggestion(int length, char suggestion[]);
 
-void PrintSuggestion(int lenght, int countofcontains, int countofcontainsinrightplace, int countsdoesntcontain, char contains[], char containsrightpplace[], char doesntcontain[], char suggestion[], char word[]);
+void PrintSuggestion(char table[], int lenght, int countofcontains, int countofcontainsinrightplace, int countsdoesntcontain, char contains[], char containsrightpplace[], char doesntcontain[], char suggestion[], char word[]);

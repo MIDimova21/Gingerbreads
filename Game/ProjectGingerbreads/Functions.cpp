@@ -121,14 +121,14 @@ void EnterSuggestion(int length, char suggestion[])
 	ClearScreen();
 }
 
-void PrintSuggestion(int lenght, int countofcontains, int countofcontainsinrightplace, int countdoesntcontain, char contains[], char containsinrightplace[], char doesntcontain[], char suggest[], char word[])
+void PrintSuggestion(char table[], int lenght, int countofcontains, int countofcontainsinrightplace, int countdoesntcontain, char contains[], char containsinrightplace[], char doesntcontain[], char suggest[], char word[])
 {
 	countofcontains = 0;	
 	countofcontainsinrightplace = 0; 
 	countdoesntcontain = 0;
 
 	SetColor(WHITE);
-	cout << "-------------------------\n|";
+	cout << "\n" << table << "\n|";
 	for (int i = 0; i < lenght; i++)
 	{
 		for (int j = 0; j < lenght; j++)
@@ -167,5 +167,4 @@ void PrintSuggestion(int lenght, int countofcontains, int countofcontainsinright
 			Lost();
 		}
 	}
-	cout << "\n-------------------------\n";
 }
