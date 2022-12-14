@@ -3,10 +3,10 @@
 #include "../ProjectGingerbreads/Functions.h"
 
 char extrememodeword[6];
+
 void ExtremeGenerator(char word[])
 {
 	srand(time(NULL));
-	char exturnto1darray[1][6];
 	char extrememodewords[30][6] = {
 		{'s', 'n', 'a', 'z', 'z', 'y'},
 		{'a', 'v', 'a', 't', 'a', 'r'},
@@ -39,21 +39,15 @@ void ExtremeGenerator(char word[])
 		{'x', 'i', 's', 't', 'y', 's'},
 		{'d', 'e', 'n', 'g', 'u', 'e'}
 	};
+
 	int extrememodeindex = rand() % 30;
 
-	exturnto1darray[1][0] = extrememodewords[extrememodeindex][0];
-	exturnto1darray[1][1] = extrememodewords[extrememodeindex][1];
-	exturnto1darray[1][2] = extrememodewords[extrememodeindex][2];
-	exturnto1darray[1][3] = extrememodewords[extrememodeindex][3];
-	exturnto1darray[1][4] = extrememodewords[extrememodeindex][4];
-	exturnto1darray[1][5] = extrememodewords[extrememodeindex][5];
-
-	extrememodeword[0] = exturnto1darray[1][0];
-	extrememodeword[1] = exturnto1darray[1][1];
-	extrememodeword[2] = exturnto1darray[1][2];
-	extrememodeword[3] = exturnto1darray[1][3];
-	extrememodeword[4] = exturnto1darray[1][4];
-	extrememodeword[5] = exturnto1darray[1][5];
+	extrememodeword[0] = extrememodewords[extrememodeindex][0];
+	extrememodeword[1] = extrememodewords[extrememodeindex][1];
+	extrememodeword[2] = extrememodewords[extrememodeindex][2];
+	extrememodeword[3] = extrememodewords[extrememodeindex][3];
+	extrememodeword[4] = extrememodewords[extrememodeindex][4];
+	extrememodeword[5] = extrememodewords[extrememodeindex][5];
 
 }
 
@@ -68,11 +62,21 @@ void ExtremeMode()
 	EnterSuggestion(extrememodelenght, extrememodesuggestionOne);
 	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionOne, extrememodeword);
 	EnterSuggestion(extrememodelenght, extrememodesuggestionTwo);
+	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionOne, extrememodeword);
 	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionTwo, extrememodeword);
 	EnterSuggestion(extrememodelenght, extrememodesuggestionThree);
+	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionOne, extrememodeword);
+	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionTwo, extrememodeword);
 	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionThree, extrememodeword);
 	EnterSuggestion(extrememodelenght, extrememodesuggestionFour);
+	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionOne, extrememodeword);
+	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionTwo, extrememodeword);
+	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionThree, extrememodeword);
 	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionFour, extrememodeword);
 	EnterSuggestion(extrememodelenght, extrememodesuggestionFive);
+	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionOne, extrememodeword);
+	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionTwo, extrememodeword);
+	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionThree, extrememodeword);
+	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionFour, extrememodeword);
 	PrintSuggestion(extrememodelenght, extrememodecountofcontains, extrememodecountofcontainsinrightplace, extrememodecountsdoesntcontain, extrememodecontains, extrememodecontainsrightplace, extrememodedoesntcontain, extrememodesuggestionFive, extrememodeword);
 }

@@ -6,7 +6,6 @@ char easymodeword[4];
 
 void EasyGenerator(char word[])
 {
-	char esturnto1darray[1][4];
 	srand(time(NULL));
 	char easymodewords[30][4] = {
 		{'r', 'a', 'i', 'n'},
@@ -42,15 +41,10 @@ void EasyGenerator(char word[])
 	};
 	int indexeasymode = rand() % 30;
 
-	esturnto1darray[1][0] = easymodewords[indexeasymode][0];
-	esturnto1darray[1][1] = easymodewords[indexeasymode][1];
-	esturnto1darray[1][2] = easymodewords[indexeasymode][2];
-	esturnto1darray[1][3] = easymodewords[indexeasymode][3];
-
-	easymodeword[0] = esturnto1darray[1][0];
-	easymodeword[1] = esturnto1darray[1][1];
-	easymodeword[2] = esturnto1darray[1][2];
-	easymodeword[3] = esturnto1darray[1][3];
+	easymodeword[0] = easymodewords[indexeasymode][0];
+	easymodeword[1] = easymodewords[indexeasymode][1];
+	easymodeword[2] = easymodewords[indexeasymode][2];
+	easymodeword[3] = easymodewords[indexeasymode][3];
 }
 
 char easymodesuggestionOne[4], easymodesuggestionTwo[4], easymodesuggestionThree[4], easymodesuggestionFour[4], easymodesuggestionFive[4],
@@ -64,11 +58,21 @@ void EasyMode()
 	EnterSuggestion(easymodelenght, easymodesuggestionOne);
 	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionOne, easymodeword);
 	EnterSuggestion(easymodelenght, easymodesuggestionTwo);
+	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionOne, easymodeword);
 	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionTwo, easymodeword);
 	EnterSuggestion(easymodelenght, easymodesuggestionThree);
+	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionOne, easymodeword);
+	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionTwo, easymodeword);
 	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionThree, easymodeword);
 	EnterSuggestion(easymodelenght, easymodesuggestionFour);
+	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionOne, easymodeword);
+	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionTwo, easymodeword);
+	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionThree, easymodeword);
 	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionFour, easymodeword);
 	EnterSuggestion(easymodelenght, easymodesuggestionFive);
+	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionOne, easymodeword);
+	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionTwo, easymodeword);
+	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionThree, easymodeword);
+	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionFour, easymodeword);
 	PrintSuggestion(easymodelenght, easymodecountofcontains, easymodecountofcontainsinrightplace, easymodecountsdoesntcontain, easymodecontains, easymodecontainsrightplace, easymodedoesntcontain, easymodesuggestionFive, easymodeword);
 }

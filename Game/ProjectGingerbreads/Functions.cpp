@@ -118,6 +118,7 @@ void EnterSuggestion(int length, char suggestion[])
 	{
 		cin >> suggestion[i];
 	}
+	ClearScreen();
 }
 
 void PrintSuggestion(int lenght, int countofcontains, int countofcontainsinrightplace, int countdoesntcontain, char contains[], char containsinrightplace[], char doesntcontain[], char suggest[], char word[])
@@ -126,6 +127,7 @@ void PrintSuggestion(int lenght, int countofcontains, int countofcontainsinright
 	countofcontainsinrightplace = 0; 
 	countdoesntcontain = 0;
 
+	SetColor(WHITE);
 	cout << "-------------------------\n|";
 	for (int i = 0; i < lenght; i++)
 	{
@@ -159,7 +161,7 @@ void PrintSuggestion(int lenght, int countofcontains, int countofcontainsinright
 			ClearScreenMenu();
 			Win();
 		}
-		else if (i == lenght && countofcontainsinrightplace != lenght)
+		else if (i == lenght)
 		{
 			ClearScreenMenu();
 			Lost();
