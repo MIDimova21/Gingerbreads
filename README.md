@@ -37,7 +37,7 @@ The essence of this project was to create a C++ game based on wordplay. The game
   
 ## 💼 Documents
   <ul>
-    <li><a href="Documentation/Gingerbreads_Documentation.docx">Documentation</a></li>
+    <li><a href="Documentation/Documentation_Gingerbreads.docx">Documentation</a></li>
     <li><a href="Documentation/Gingerbreads.pptx">Presentation</a></li>
    </ul>
 
