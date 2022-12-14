@@ -6,6 +6,7 @@ char advancedmodeword[5];
 void AdvancedGenerator(char word[])
 {
 	srand(time(NULL));
+	char amturnto1darray[1][5];
 	char advancedmodewords[30][5] = {
 		{'a', 'l', 'o', 'n', 'g'},
 		{'b', 'a', 's', 'e', 'd'},
@@ -39,12 +40,18 @@ void AdvancedGenerator(char word[])
 		{'s', 'h', 'a', 'r', 'k'}
 	};
 	int advancedindex = rand() % 30;
-	advancedmodeword[0] = advancedmodewords[advancedindex][0];
-	advancedmodeword[1] = advancedmodewords[advancedindex][1];
-	advancedmodeword[2] = advancedmodewords[advancedindex][2];
-	advancedmodeword[3] = advancedmodewords[advancedindex][3];
-	advancedmodeword[4] = advancedmodewords[advancedindex][4];
 
+	amturnto1darray[1][0] = advancedmodewords[advancedindex][0];
+	amturnto1darray[1][1] = advancedmodewords[advancedindex][1];
+	amturnto1darray[1][2] = advancedmodewords[advancedindex][2];
+	amturnto1darray[1][3] = advancedmodewords[advancedindex][3];
+	amturnto1darray[1][4] = advancedmodewords[advancedindex][4];
+
+	advancedmodeword[0] = amturnto1darray[1][0];
+	advancedmodeword[1] = amturnto1darray[1][1];
+	advancedmodeword[2] = amturnto1darray[1][2];
+	advancedmodeword[3] = amturnto1darray[1][3];
+	advancedmodeword[4] = amturnto1darray[1][4];
 }
 
 char advancedmodesuggestionOne[5], advancedmodesuggestionTwo[5], advancedmodesuggestionThree[5], advancedmodesuggestionFour[5], advancedmodesuggestionFive[5], 

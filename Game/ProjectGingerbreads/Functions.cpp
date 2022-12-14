@@ -156,10 +156,12 @@ void PrintSuggestion(int lenght, int countofcontains, int countofcontainsinright
 		cout << "|";
 		if (countofcontainsinrightplace == lenght)
 		{
+			ClearScreenMenu();
 			Win();
 		}
 		else if (i == lenght && countofcontainsinrightplace != lenght)
 		{
+			ClearScreenMenu();
 			Lost();
 		}
 	}

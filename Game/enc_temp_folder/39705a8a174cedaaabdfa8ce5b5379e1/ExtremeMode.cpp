@@ -55,6 +55,10 @@ void ExtremeGenerator(char word[])
 	extrememodeword[4] = exturnto1darray[1][4];
 	extrememodeword[5] = exturnto1darray[1][5];
 
+	for (int i = 0; i < 5; i++)
+	{
+		cout << extrememodeword[i];
+	}
 }
 
 char extrememodesuggestionOne[6], extrememodesuggestionTwo[6], extrememodesuggestionThree[6], extrememodesuggestionFour[6], extrememodesuggestionFive[6],
